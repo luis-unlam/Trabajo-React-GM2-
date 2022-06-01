@@ -19,6 +19,7 @@
         "react", "prettier"
     ],
     "rules": {
+      "react/react-in-jsx-scope": "off",
       "semi": 0,
       "comma-dangle": 0,
       "prettier/prettier": [

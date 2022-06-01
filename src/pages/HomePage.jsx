@@ -1,3 +1,5 @@
+import { Task } from '../components/HomePage/Task'
+
 export default function HomePage() {
-  return 'Home Page'
+  return <Task />
 }
