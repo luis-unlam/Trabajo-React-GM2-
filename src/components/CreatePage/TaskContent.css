@@ -1,0 +1,22 @@
+.formTaskContent{
+    display:flex;
+    flex-direction:column;
+}
+
+.inputTitle{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 37px;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.inputLabel, .inputComment, .inputDate{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #787878;
+}

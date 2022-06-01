@@ -1,8 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import EditPage from './pages/EditPage'
-// import CreatePage from './pages/CreatePage'
+import CreatePage from './pages/CreatePage'
 import NotFoundPage from './pages/NotFoundPage'
 
 export default function App() {
@@ -11,10 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/editPage" element={<EditPage />} />
-        <Route
-          path="/createPage"
-          element={<Navigate replace to="/editPage" />}
-        />
+        <Route path="/createPage" element={<CreatePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

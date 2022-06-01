@@ -1,5 +1,6 @@
-.containerTask{
+.containerCreateTask{
     display: flex;
+    background-color: white;
     width: 70%;
     height: 702px;
     position: absolute;
