@@ -1,3 +1,5 @@
+import { NotFound } from '../components/NotFoundPage/NotFoundMessage'
+
 export default function NotFoundPage() {
-  return '404 Not Found Page'
+  return <NotFound />
 }
