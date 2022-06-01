@@ -1,6 +1,7 @@
 .formTaskContent{
     display:flex;
     flex-direction:column;
+    margin: 29px 0px 0px 92px;
 }
 
 .inputTitle{
@@ -9,7 +10,11 @@
     font-weight: 700;
     font-size: 31px;
     line-height: 37px;
-    color: rgba(0, 0, 0, 0.5)
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+    margin-bottom: 30px;
 }
 
 .inputLabel, .inputComment, .inputDate{
@@ -19,4 +24,15 @@
     font-size: 18px;
     line-height: 22px;
     color: #787878;
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.inputLabel{
+    margin-bottom:30px;
+}
+
+.inputDate{
+    margin-bottom:60px;
 }
