@@ -6,6 +6,7 @@
     width: 20%;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    cursor: pointer;
 }
 
 .categoriesTask h4:hover {
