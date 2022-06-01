@@ -1,3 +1,5 @@
-export default function EditPage() {
-  return 'Edit Page'
+import { EditTask } from '../components/EditPage/EditTask'
+
+export default function CreatePage() {
+  return <EditTask />
 }
