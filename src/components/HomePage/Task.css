@@ -17,6 +17,10 @@
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
 }
+.categoriesTask h4:hover {
+    text-decoration: underline;
+    font-size: 24px;
+}
 
 .categoriesTask h4{
     font-size: 22px;
