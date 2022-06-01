@@ -8,6 +8,13 @@ export function TaskContent() {
         <input placeholder="Label" className="inputLabel" />
         <input placeholder="Due Date" className="inputDate" />
         <input placeholder="Add a comment" className="inputComment" />
+
+        <button type="button" className="cancelButton">
+          Cancel
+        </button>
+        <button type="button" className="saveButton">
+          Save
+        </button>
       </form>
     </div>
   )
