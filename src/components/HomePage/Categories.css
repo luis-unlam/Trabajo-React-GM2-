@@ -12,12 +12,14 @@
 .categoriesTask h4:hover {
     text-decoration: underline;
     font-size: 24px;
+    font-family: 'Lato';
 }
 
 .categoriesTask h4{
     font-size: 22px;
     font-weight: 400;
     line-height: 26.4px;
+    font-family: 'Lato';
 }
 
 .categoriesTask h4:first-child{
