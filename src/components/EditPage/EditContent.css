@@ -25,7 +25,7 @@
     margin-bottom: 0.5em;
 }
 
-.inputLabel, .inputComment, .inputDate{
+.inputLabel, .inputDate{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
@@ -35,6 +35,14 @@
     border: none;
     border-radius: 0.5em;
     width: 90%;
+}
+
+
+.inputComment{
+border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
 }
 
 .pDate, .pLabel{

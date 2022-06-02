@@ -10,7 +10,7 @@ export function EditContent() {
         </button>
       </NavLink>
       <form className="formTaskContent">
-        <input placeholder="Untitled" className="inputTitle" />
+        <input placeholder="Edit Task" className="inputTitle" />
         <div className="label">
           <p className="pLabel">Label</p>
           <input placeholder="Empty" className="inputLabel" />
