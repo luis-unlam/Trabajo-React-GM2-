@@ -1,92 +1,190 @@
-@import '../../styles.css/variables.css';
 @import '../../styles.css/global.css';
-
-.editContent {
-    width: 100%;
-}
-
-.Label_task, .Due_task {
-    width: 100%;
-    border: none;
-    background-color: var(--background-color-task);
-    margin-right: 6.7em;
-    padding-left: 1em;
-    border-radius: 0.5em;
-}
+@import '../../styles.css/variables.css';
 
 .formTaskContent{
     display:flex;
     flex-direction:column;
     margin: 1.8em 0 0 5.75em;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #787878;
+}
+.inputTitle{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.9em;
+    line-height: 2.3em;
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.5em;
+    width: 90%;
+    margin-bottom: 0.5em;
 }
 
-.inputLabelEdit, .inputDateEdit{
-    width: 30%;
+.inputLabel, .inputDate{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.3em;
+    color: var(--background-color-task);
+    border: none;
+    border-radius: 0.5em;
+    width: 90%;
+}
+
+
+.inputComment{
+border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+}
+
+.pDate, .pLabel{
+    margin-right: 5em;
+    width: 120px;
 }
 
 .inputLabel{
     margin-bottom:30px;
+
 }
 
 .inputDate{
     margin-bottom:60px;
 }
 
-.ItemContentEdit{
-    display: flex;
+.label, .date{
+    display:flex;
+    color: rgba(120, 120, 120, 0.5)
+}
+
+.formTaskContent p{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    color: #787878;
+    color: var(--button-cancel);
+    padding-top:15px;
+}
+
+.saveButton {
+    display: block;
+    width: 158px;
+    height: 45px;
+    border-radius: 6.25em;
     border: none;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    background-color: var(--buton-save);
+    color: white;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 43px;
+    margin-bottom: 49px;
+    cursor: pointer;
   }
 
-.inputCommentEdit{
+  .cancelButton{
+    display: block;
+    width: 158px;
+    height: 45px;
+    border: none;
+    border-radius: 6.25em;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     color: #787878;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0px 242px 49px 0px;
+    cursor: pointer;
+  }
+
+  .backButtonEdit{
+    margin-top: 90%;
+    display: block;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
     border: none;
-    border-radius: 8px;
-    width: 85%;
-    margin-bottom: 20px;
-}
+    background-color: #EA5959;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    cursor: pointer;
+    font-family: 'Lato';
+    margin-left: 20px;
+    cursor: pointer;
+  }
 
-.inputCompleteEdit{
-    margin-bottom: 18px;
-    border-top: 1px;
-    border-left: 1px;
-    border-right: 1px;
-    width:85%;
-}
+  .navButton{
+    text-decoration: none;
+    color:white;
+    bottom: 0;
+    right: 0;
+  }
 
+  .navButtonCancel{
+    text-decoration: none;
+    color:#787878;
+  }
 
-@media (max-width: 767px) {
-    .formTaskContent { /* NO DA BOLA */
-        margin: 0;
+  @media (max-width: 767px) {
+    .formTaskContent {
+      height: 70%;
+      width: 70%;
     }
 
-    .editContent {
-        width: 100%;
+    .inputTitle{
+      font-size: 1.3em;
+      margin-bottom: 2em;
     }
 
-
-    .Label_task ,
-    .Due_task {
-        width: 80%;
+    .inputComment ,
+    .inputDate,
+    .inputLabel{
+      font-size: 1em;
+      background-color: var(--background-color-task);
+      width: 100%;
+      padding-left: 1em;
     }
 
-    .inputLabelEdit ,
-    .inputDateEdit {
-        width: 40%;
+    .pLabel,
+    .pDate {
+      width: 0;
     }
 
-    .cancelButtonEdit {
+    .backButton {
+      width: 3.5em;
+      height: 3.5em;
     }
+
+    .cancelButton,
+    .saveButton {
+      width: 6em;
+    }
+
+    .cancelButton {
+      margin-right: 220px;
+    }
+  }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .date{
+    margin-bottom: -3em;
+  }
 }

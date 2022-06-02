@@ -53,6 +53,7 @@
     color: #8E8E8E;
     background-color: white;
     border: none;
+    cursor: pointer;
 }
 
 .deleteButton{

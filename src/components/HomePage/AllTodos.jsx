@@ -1,4 +1,5 @@
 import './AllTodos.css'
+import { NavLink } from 'react-router-dom'
 import todos from '../../json/tasks.json'
 
 export function AllTodos() {
@@ -15,9 +16,11 @@ export function AllTodos() {
             <p className="lastp">{todo.comment}</p>
           </div>
           <div className="taskButtons">
-            <button type="button" className="editButton">
-              <i className="fas fa-edit fa-edit fa-2x" />
-            </button>
+            <NavLink to="/editPage">
+              <button type="button" className="editButton">
+                <i className="fas fa-edit fa-edit fa-2x" />
+              </button>
+            </NavLink>
             <button type="button" className="deleteButton">
               <i className="fas fa-trash-alt fa-delete fa-2x" />
             </button>
