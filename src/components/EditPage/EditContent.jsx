@@ -4,11 +4,6 @@ import { NavLink } from 'react-router-dom'
 export function EditContent() {
   return (
     <div className="taskContent">
-      <NavLink className="navButton" to="/">
-        <button type="button" className="backButtonEdit">
-          Back
-        </button>
-      </NavLink>
       <form className="formTaskContent">
         <input placeholder="Edit Task" className="inputTitle" />
         <div className="label">
