@@ -70,12 +70,12 @@ h4 {
 
   .cancelButtonEdit ,
   .cancelButton {
-    background-color: white;
-    border-radius: 50px;
-    border-bottom-color: black;
     display: block;
-    width: 158px;
+    width: 110px;
     height: 45px;
+    border-radius: 6.25em;
+    border: none;
+    background-color: rgba(115, 109, 109, 0.238);
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
@@ -84,7 +84,8 @@ h4 {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 0px 242px 49px 0px; 
+    margin-right: 180px;
+    margin-bottom: 49px; 
     cursor: pointer;
   }
 
