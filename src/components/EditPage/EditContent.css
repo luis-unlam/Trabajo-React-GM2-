@@ -31,7 +31,9 @@
 .inputDate{
     margin-bottom:60px;
 }
-
+.navButtonEdit{
+    margin-top: 30%;
+  }
 .ItemContentEdit{
     display: flex;
     font-family: 'Lato';
@@ -57,6 +59,7 @@
     width: 85%;
     margin-bottom: 20px;
 }
+
 
 .inputCompleteEdit{
     margin-bottom: 18px;

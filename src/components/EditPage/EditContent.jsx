@@ -1,4 +1,5 @@
 import './EditContent.css'
+import { NavLink } from 'react-router-dom'
 
 export function EditContent() {
   return (
@@ -16,6 +17,12 @@ export function EditContent() {
         <input placeholder="" className="inputCompleteEdit" />
         <p className="inputCommentEdit">Add a comment</p>
         <input placeholder="" className="inputCompleteEdit" />
+
+        <NavLink className="navButtonEdit" to="/">
+          <button type="button" className="backButton">
+            Back
+          </button>
+        </NavLink>
 
         <button type="button" className="cancelButtonEdit">
           Cancel
