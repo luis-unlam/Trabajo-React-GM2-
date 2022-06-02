@@ -12,7 +12,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/EditPage" element={<EditPage />} />
         <Route path="/createPage" element={<CreatePage />} />
-        <Route path="/notFoundPage" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   )
