@@ -1,28 +1,35 @@
+@import '../../styles.css/global.css';
+
 .categoriesTask{
-    padding-left: 50px;
-    padding-top: 139px;
+    padding-left: 3.125em;
+    padding-top: 8.6875em;
     background-color: white;
     border-right: 1px solid black;
     width: 20%;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0.625em;
+    border-top-left-radius: 0.625em;
     cursor: pointer;
 }
 
 .categoriesTask h4:hover {
     text-decoration: underline;
-    font-size: 24px;
+    font-size: 1.5em;
     font-family: 'Lato';
 }
 
 .categoriesTask h4{
-    font-size: 22px;
     font-weight: 400;
-    line-height: 26.4px;
+    line-height: 1.65em;
     font-family: 'Lato';
 }
 
 .categoriesTask h4:first-child{
     color: red;
     margin-top: 0;
+}
+
+@media (max-width: 767px) {
+    .categoriesTask {
+        display: none;
+    }
 }
