@@ -1,9 +1,6 @@
 import './ViewTasks.css'
-<<<<<<< Updated upstream
 import { NavLink } from 'react-router-dom'
-=======
 import { AllTodos } from './AllTodos'
->>>>>>> Stashed changes
 
 export function ViewTasks() {
   return (
