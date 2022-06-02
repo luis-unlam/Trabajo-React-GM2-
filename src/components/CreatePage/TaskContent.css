@@ -116,8 +116,15 @@
     margin-top: 22px;
     margin-left: 20px;
   }
-  
+
   .navButton{
     text-decoration: none;
     color:white;
   }
+
+  .navButtonCancel{
+    text-decoration: none;
+    color:#787878;
+  }
+
+  

@@ -22,7 +22,9 @@ export function TaskContent() {
         <input placeholder="Add a comment" className="inputComment" />
 
         <button type="button" className="cancelButton">
-          Cancel
+          <NavLink className="navButtonCancel" to="/">
+            Cancel
+          </NavLink>
         </button>
         <button type="button" className="saveButton">
           Save
