@@ -8,13 +8,13 @@
     width: 20%;
     border-bottom-left-radius: 0.625em;
     border-top-left-radius: 0.625em;
-    cursor: pointer;
 }
 
 .categoriesTask h4:hover {
     text-decoration: underline;
     font-size: 1.5em;
     font-family: 'Lato';
+    cursor: pointer;
 }
 
 .categoriesTask h4{
