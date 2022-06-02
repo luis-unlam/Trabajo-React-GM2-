@@ -1,7 +1,7 @@
 @import '../../styles.css/variables.css';
 
 .inputTask {
-  margin-top: 1em;
+  margin-top: 25px;
   padding: 0.6em 0 1em 1.5em;
   background-color: var(--background-color-task);
   border: none;
