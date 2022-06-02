@@ -12,62 +12,6 @@
         "date": "2021-07-06",
         "category": "Groceries",
         "comment": "Apple, orange, meat, rice"
-    },
-    {
-        "id":3,
-        "name": "Pay rent",
-        "date": "2021-07-08",
-        "category":"Payments",
-        "comment":"Price is 200usd"
-    },
-    {
-        "id": 4,
-        "name": "Study Java",
-        "date": "2021-07-11",
-        "category": "College",
-        "comment": "I need to review HashCode and Equals"
-    },
-    {
-        "id": 5,
-        "name": "Buy drink",
-        "date": "2021-07-16",
-        "category": "Groceries",
-        "comment": "Water, Orange juice, Pepsi"
-    },
-    {
-        "id": 6,
-        "name": "Study React JS",
-        "date": "2021-07-01",
-        "category": "College",
-        "comment": "I need to review components"
-    },
-    {
-        "id": 7,
-        "name": "Buy food",
-        "date": "2021-07-06",
-        "category": "Groceries",
-        "comment": "Apple, orange, meat, rice"
-    },
-    {
-        "id":8,
-        "name": "Pay rent",
-        "date": "2021-07-08",
-        "category":"Payments",
-        "comment":"Price is 200usd"
-    },
-    {
-        "id": 9,
-        "name": "Study Java",
-        "date": "2021-07-11",
-        "category": "College",
-        "comment": "I need to review HashCode and Equals"
-    },
-    {
-        "id": 10,
-        "name": "Buy drink",
-        "date": "2021-07-16",
-        "category": "Groceries",
-        "comment": "Water, Orange juice, Pepsi"
     }
 ]
  

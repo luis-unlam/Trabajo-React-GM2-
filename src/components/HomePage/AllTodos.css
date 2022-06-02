@@ -1,0 +1,62 @@
+.allTodos{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.todos{
+    border: solid 1px #787878;
+    border-radius: 3px;
+    padding: 10px 10px 10px 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskFirstRow{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.taskFirstRow p:first-child{
+    font-size: 24px;
+}
+
+.taskFirstRow p:last-child{
+    background-color: #EA5959;
+    padding: 7px 32px 0px 32px;
+    margin-left: 23px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.lastp{
+    display: none;
+}
+
+.thirdp{
+    color: #787878;
+    font-size: 18px;
+}
+
+.taskButtons{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.editButton{
+    color: #8E8E8E;
+    background-color: white;
+    border: none;
+}
+
+.deleteButton{
+    color: red;
+    background-color: white;
+    border: none;
+}
