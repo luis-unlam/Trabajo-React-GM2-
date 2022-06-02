@@ -1,12 +1,15 @@
+@import '../../styles.css/global.css';
+@import '../../styles.css/variables.css';
+
 .formTaskContent{
     display:flex;
     flex-direction:column;
-    margin: 29px 0px 0px 92px;
+    margin: 1.8em 0 0 5.75em;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1em;
+    line-height: 1.3em;
     color: #787878;
 }
 
@@ -14,13 +17,13 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
-    font-size: 31px;
-    line-height: 37px;
+    font-size: 1.9em;
+    line-height: 2.3em;
     color: rgba(0, 0, 0, 0.5);
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5em;
     width: 90%;
-    margin-bottom: 30px;
+    margin-bottom: 0.5em;
 }
 
 .inputLabel, .inputComment, .inputDate{
@@ -28,20 +31,21 @@
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 22px;
-    color: rgba(120, 120, 120, 1);
+    line-height: 2.3em;
+    color: var(--background-color-task);
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5em;
     width: 90%;
 }
 
 .pDate, .pLabel{
-    margin-right: 80px;
+    margin-right: 5em;
     width: 120px;
 }
 
 .inputLabel{
     margin-bottom:30px;
+
 }
 
 .inputDate{
@@ -59,16 +63,16 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    color: #787878;
+    color: var(--button-cancel);
 }
 
 .saveButton {
     display: block;
     width: 158px;
     height: 45px;
-    border-radius: 100px;
+    border-radius: 6.25em;
     border: none;
-    background-color: #EA5959;
+    background-color: var(--buton-save);
     color: white;
     font-family: 'Lato';
     font-style: normal;
@@ -88,6 +92,7 @@
     width: 158px;
     height: 45px;
     border: none;
+    border-radius: 6.25em;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
@@ -103,8 +108,8 @@
   
   .backButton{
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 3,125em;
+    height: 3,125em;
     border-radius: 50%;
     border: none;
     background-color: #EA5959;
@@ -115,6 +120,7 @@
     font-family: 'Lato';
     margin-top: 22px;
     margin-left: 20px;
+    cursor: pointer;
   }
 
   .navButton{
@@ -127,4 +133,43 @@
     color:#787878;
   }
 
+  @media (max-width: 767px) {
+    .formTaskContent {
+      height: 70%;
+      width: 70%;
+    }
+
+    .inputTitle{
+      font-size: 1.3em;
+      margin-bottom: 2em;
+    }
+
+    .inputComment ,
+    .inputDate,
+    .inputLabel{
+      font-size: 1em;
+      background-color: var(--background-color-task);
+      width: 100%;
+      padding-left: 1em;
+    }
+
+    .pLabel,
+    .pDate {
+      width: 0;
+    }
+
+    .backButton {
+      width: 3.5em;
+      height: 3.5em;
+    }
+
+    .cancelButton,
+    .saveButton {
+      width: 6em;
+    }
+
+    .cancelButton {
+      margin-right: 220px;
+    }
+  }
   
