@@ -6,26 +6,26 @@
 }
 
 .formTaskContent{
-    display:flex;
-    flex-direction:column;
-    margin: 1.8em 0 0 5.75em;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1em;
-    line-height: 1.3em;
-    color: #787878;
+  display:flex;
+  flex-direction:column;
+  margin: 1.8em 0 0 5.75em;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.3em;
+  color: #787878;
 }
 
 .inputLabel, .inputComment, .inputDate{
-    width: 90%;
-    background-color: var(--background-color-task);
-    padding-left: 1em;
+  width: 90%;
+  background-color: var(--background-color-task);
+  padding-left: 1em;
 }
 
 .pDate, .pLabel{
-    margin-right: 5em;
-    width: 120px;
+  margin-right: 5em;
+  width: 120px;
 }
 
 .inputDate,
@@ -34,43 +34,43 @@
 }
 
 .inputLabel{
-    margin-bottom:30px;
+  margin-bottom:30px;
 }
 
 .inputDate{
-    margin-bottom:60px;
+  margin-bottom:60px;
 }
 
 .label, .date{
-    display:flex;
-    color: rgba(120, 120, 120, 0.5)
+  display:flex;
+  color: rgba(120, 120, 120, 0.5)
 }
 
 .formTaskContent p{
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    color: var(--button-cancel);
-    padding-top:15px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--button-cancel);
+  padding-top:15px;
 }
   
 .backButton{
   display: block;
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-    border: none;
-    background-color: #EA5959;
-    color: white;
-    font-size: 12px;
-    position: absolute;
-    cursor: pointer;
-    font-family: 'Lato';
-    margin-top: 22px;
-    margin-left: 20px;
-    cursor: pointer;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: none;
+  background-color: #EA5959;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  cursor: pointer;
+  font-family: 'Lato';
+  margin-top: 22px;
+  margin-left: 20px;
+  cursor: pointer;
   }
 
 .navButton{
@@ -84,10 +84,10 @@
   }
 
 @media (max-width: 767px) {
-    .formTaskContent {
-      height: 70%;
-      width: 70%;
-    }
+  .formTaskContent {
+    height: 70%;
+    width: 70%;
+  }
 
     .inputTitle{
       font-size: 1.3em;
