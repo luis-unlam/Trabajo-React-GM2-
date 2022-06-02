@@ -1,3 +1,8 @@
+.editContent{
+    width: 100%;
+}
+
+
 .formTaskContent{
     display:flex;
     flex-direction:column;
@@ -17,7 +22,7 @@
     margin-bottom: 30px;
 }
 
-.inputLabel, .inputComment, .inputDate{
+.inputLabelEdit, .inputDateEdit{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
@@ -26,9 +31,8 @@
     color: #787878;
     border: none;
     border-radius: 8px;
-    width: 90%;
+    width: 30%;
 }
-
 .inputLabel{
     margin-bottom:30px;
 }
@@ -76,3 +80,35 @@
     margin: 0px 242px 49px 0px; 
     cursor: pointer;
   }
+  .ItemContentEdit{
+      display: flex;
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: #787878;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 30px;
+  }
+
+  .inputCommentEdit{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #787878;
+    border: none;
+    border-radius: 8px;
+    width: 85%;
+    margin-bottom: 20px;
+}
+.inputCompleteEdit{
+    margin-bottom: 20px;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    width:85%;;
+}
