@@ -1,10 +1,13 @@
 import './TaskContent.css'
+import { NavLink } from 'react-router-dom'
 
 export function TaskContent() {
   return (
     <div className="taskContent">
       <button type="button" className="backButton">
-        Back
+        <NavLink className="navButton" to="/">
+          Back
+        </NavLink>
       </button>
       <form className="formTaskContent">
         <input placeholder="Untitled" className="inputTitle" />

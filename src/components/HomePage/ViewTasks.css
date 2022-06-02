@@ -31,3 +31,8 @@
   margin-bottom: 33px;
   cursor: pointer;
 }
+
+.navButton{
+  text-decoration: none;
+  color:white;
+}
