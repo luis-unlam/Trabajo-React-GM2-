@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 export function TaskContent() {
   return (
     <div className="taskContent">
-      <NavLink to="/">
-        <button type="button">
+      <NavLink to="/" className="navButton">
+        <button type="button" className="backButton">
           <i className="fa-solid fa-arrow-left fa-2xl" />
         </button>
       </NavLink>
@@ -33,9 +33,3 @@ export function TaskContent() {
     </div>
   )
 }
-
-;<NavLink className="navButton" to="/">
-  <button type="button" className="backButton">
-    Back
-  </button>
-</NavLink>
