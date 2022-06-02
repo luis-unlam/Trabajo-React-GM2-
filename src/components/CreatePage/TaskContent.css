@@ -83,6 +83,12 @@
     color:#787878;
   }
 
+.backButton{
+  color: #EA5959;;
+  background-color: white;
+  border: none;
+}
+
 @media (max-width: 767px) {
   .formTaskContent {
     height: 70%;

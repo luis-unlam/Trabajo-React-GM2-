@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 export function TaskContent() {
   return (
     <div className="taskContent">
-      <NavLink className="navButton" to="/">
-        <button type="button" className="backButton">
-          Back
+      <NavLink to="/">
+        <button type="button">
+          <i className="fa-solid fa-arrow-left fa-2xl" />
         </button>
       </NavLink>
       <form className="formTaskContent">
