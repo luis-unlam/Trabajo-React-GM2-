@@ -1,13 +1,16 @@
 @import '../../styles.css/global.css';
 
 .categoriesTask{
-    padding-left: 3.125em;
-    padding-top: 8.6875em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2em;
     background-color: white;
     border-right: 1px solid black;
-    width: 20%;
-    border-bottom-left-radius: 0.625em;
-    border-top-left-radius: 0.625em;
+    width: 30%;
+    border-bottom-left-radius: 0.6em;
+    border-top-left-radius: 0.6em;
     cursor: pointer;
 }
 
@@ -19,17 +22,22 @@
 
 .categoriesTask h4{
     font-weight: 400;
-    line-height: 1.65em;
+    line-height: 2em;
     font-family: 'Lato';
 }
 
 .categoriesTask h4:first-child{
     color: red;
-    margin-top: 0;
 }
 
 @media (max-width: 767px) {
     .categoriesTask {
         display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .categoriesTask {
+        width: 40%;
     }
 }

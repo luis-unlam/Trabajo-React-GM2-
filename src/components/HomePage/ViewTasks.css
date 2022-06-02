@@ -1,18 +1,25 @@
+@import '../../styles.css/variables.css';
+
 .inputTask {
-  padding: 10px 0px 15px 20px;
-  background-color: #f3f3f3;
+  margin-top: 1em;
+  padding: 0.6em 0 1em 1.5em;
+  background-color: var(--background-color-task);
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5em;
   width: 90%;
   font-family: 'Lato';
 }
 
 .formTask {
-  background-color: white;
-  padding-left: 53px;
-  width: 80%;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3em;
+  width: 100%;
+  border-bottom-right-radius: 0.625em;
+  border-top-right-radius: 0.625em;
 }
 
 .buttonNewTask {
@@ -21,7 +28,7 @@
   height: 60px;
   border-radius: 50%;
   border: none;
-  background-color: #EA5959;
+  background-color: var(--button-new-task);
   color: white;
   font-size: 40px;
   position: absolute;
@@ -30,4 +37,27 @@
   margin-right: 43px;
   margin-bottom: 33px;
   cursor: pointer;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .inputTask {
+      width: 100%;
+  }
+
+  .formTask {
+    padding: 2em;
+  }
+}
+
+@media (max-width: 767px) {
+    .formTask {
+      padding: 0 2em;
+      padding-top: 3em;
+      border-radius: 0;
+    }
+
+    .inputTask {
+      width: 100%;
+    }
 }
