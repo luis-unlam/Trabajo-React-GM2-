@@ -4,6 +4,11 @@ import { NavLink } from 'react-router-dom'
 export function EditContent() {
   return (
     <div className="taskContent">
+      <NavLink to="/" className="navButton">
+        <button type="button" className="backButton">
+          <i className="fa-solid fa-arrow-left fa-2xl" />
+        </button>
+      </NavLink>
       <form className="formTaskContent">
         <input placeholder="Edit Task" className="inputTitle" />
         <div className="label">
