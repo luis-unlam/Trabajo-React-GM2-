@@ -1,38 +1,29 @@
-.editContent{
+@import '../../styles.css/variables.css';
+@import '../../styles.css/global.css';
+
+.editContent {
     width: 100%;
 }
 
+.Label_task, .Due_task {
+    width: 100%;
+    border: none;
+    background-color: var(--background-color-task);
+    margin-right: 6.7em;
+    padding-left: 1em;
+    border-radius: 0.5em;
+}
 
 .formTaskContent{
     display:flex;
     flex-direction:column;
-    margin: 29px 0px 0px 92px;
-}
-
-.inputTitle{
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 31px;
-    line-height: 37px;
-    color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 8px;
-    width: 90%;
-    margin-bottom: 30px;
+    margin: 1.8em 0 0 5.75em;
 }
 
 .inputLabelEdit, .inputDateEdit{
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    color: #787878;
-    border: none;
-    border-radius: 8px;
     width: 30%;
 }
+
 .inputLabel{
     margin-bottom:30px;
 }
@@ -41,59 +32,20 @@
     margin-bottom:60px;
 }
 
-.saveButton {
-    display: block;
-    width: 158px;
-    height: 45px;
-    border-radius: 100px;
-    border: none;
-    background-color: #EA5959;
-    color: white;
+.ItemContentEdit{
+    display: flex;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-right: 43px;
-    margin-bottom: 49px;
-    cursor: pointer;
-  }
-
-  .cancelButtonEdit{
-    background-color: white;
-    border-radius: 50px;
-    border-bottom-color: black;
-    display: block;
-    width: 158px;
-    height: 45px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
     color: #787878;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0px 242px 49px 0px; 
-    cursor: pointer;
-  }
-  .ItemContentEdit{
-      display: flex;
-      font-family: 'Lato';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 22px;
-      color: #787878;
-      border: none;
-      border-radius: 8px;
-      margin-bottom: 30px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
   }
 
-  .inputCommentEdit{
+.inputCommentEdit{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
@@ -105,10 +57,36 @@
     width: 85%;
     margin-bottom: 20px;
 }
+
 .inputCompleteEdit{
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     border-top: 1px;
     border-left: 1px;
     border-right: 1px;
-    width:85%;;
+    width:85%;
+}
+
+
+@media (max-width: 767px) {
+    .formTaskContent { /* NO DA BOLA */
+        margin: 0;
+    }
+
+    .editContent {
+        width: 100%;
+    }
+
+
+    .Label_task ,
+    .Due_task {
+        width: 80%;
+    }
+
+    .inputLabelEdit ,
+    .inputDateEdit {
+        width: 40%;
+    }
+
+    .cancelButtonEdit {
+    }
 }
