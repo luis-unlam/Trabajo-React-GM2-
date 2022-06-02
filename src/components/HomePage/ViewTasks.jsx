@@ -8,11 +8,11 @@ export function ViewTasks() {
       <h1>All Tasks</h1>
       <input placeholder="Buscar" className="inputTask" />
       <AllTodos />
-      <button type="button" className="buttonNewTask">
-        <NavLink className="navButton" to="/createPage">
+      <NavLink to="/createPage">
+        <button type="button" className="buttonNewTask">
           +
-        </NavLink>
-      </button>
+        </button>
+      </NavLink>
     </form>
   )
 }

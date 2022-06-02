@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom'
 export function TaskContent() {
   return (
     <div className="taskContent">
-      <button type="button" className="backButton">
-        <NavLink className="navButton" to="/">
+      <NavLink className="navButton" to="/">
+        <button type="button" className="backButton">
           Back
-        </NavLink>
-      </button>
+        </button>
+      </NavLink>
       <form className="formTaskContent">
         <input placeholder="Untitled" className="inputTitle" />
         <div className="label">
@@ -21,11 +21,11 @@ export function TaskContent() {
         </div>
         <input placeholder="Add a comment" className="inputComment" />
 
-        <button type="button" className="cancelButton">
-          <NavLink className="navButtonCancel" to="/">
+        <NavLink className="navButton" to="/">
+          <button type="button" className="cancelButton">
             Cancel
-          </NavLink>
-        </button>
+          </button>
+        </NavLink>
         <button type="button" className="saveButton">
           Save
         </button>
@@ -33,3 +33,9 @@ export function TaskContent() {
     </div>
   )
 }
+
+;<NavLink className="navButton" to="/">
+  <button type="button" className="backButton">
+    Back
+  </button>
+</NavLink>
