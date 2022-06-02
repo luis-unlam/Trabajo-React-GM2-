@@ -3,30 +3,29 @@ import { NavLink } from 'react-router-dom'
 
 export function EditContent() {
   return (
-    <div className="editContent">
+    <div className="taskContent">
+      <NavLink className="navButton" to="/">
+        <button type="button" className="backButtonEdit">
+          Back
+        </button>
+      </NavLink>
       <form className="formTaskContent">
         <input placeholder="Untitled" className="inputTitle" />
-        <div className="ItemContentEdit">
-          <input placeholder="Label" className="inputLabelEdit" />
-          <input placeholder="Groceries" className="Label_task" />
+        <div className="label">
+          <p className="pLabel">Label</p>
+          <input placeholder="Empty" className="inputLabel" />
         </div>
-        <div className="ItemContentEdit">
-          <input placeholder="Due Date" className="inputDateEdit" />
-          <input placeholder="xx/xx/xx" className="Due_task" />
+        <div className="date">
+          <p className="pDate">Due Date</p>
+          <input placeholder="Empty" className="inputDate" />
         </div>
-        <input placeholder="" className="inputCompleteEdit" />
-        <p className="inputCommentEdit">Add a comment</p>
-        <input placeholder="" className="inputCompleteEdit" />
+        <input placeholder="Add a comment" className="inputComment" />
 
-        <NavLink className="navButtonEdit" to="/">
-          <button type="button" className="backButton">
-            Back
+        <NavLink className="navButton" to="/">
+          <button type="button" className="cancelButton">
+            Cancel
           </button>
         </NavLink>
-
-        <button type="button" className="cancelButtonEdit">
-          Cancel
-        </button>
         <button type="button" className="saveButton">
           Save
         </button>
