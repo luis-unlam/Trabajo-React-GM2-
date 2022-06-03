@@ -142,4 +142,8 @@
   .inputLabel{
     margin-right: 2em;
   }
+  .cancelButton,
+  .saveButton{
+    width: 20%;
+  }
 }
