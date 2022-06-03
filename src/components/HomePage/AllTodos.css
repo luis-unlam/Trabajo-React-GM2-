@@ -18,7 +18,7 @@ li:nth-child(+n+4){
 }
 
 .inputCheckTodoContainer{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     min-width: 28px;
     height: 28px;
     border-radius: 8px;
@@ -27,7 +27,7 @@ li:nth-child(+n+4){
 .inputCheckTodo{
     width: 28px;
     height: 28px;
-    display: none;
+    /* display: none; */
 }
 
 .completeTask{
