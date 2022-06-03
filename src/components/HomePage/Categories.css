@@ -16,7 +16,6 @@
 
 .categoriesTask h4:hover {
     text-decoration: underline;
-    font-size: 1.5em;
     font-family: 'Lato';
     cursor: pointer;
 }
