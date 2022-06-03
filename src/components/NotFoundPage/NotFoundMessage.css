@@ -46,3 +46,11 @@
     align-items: center;
     margin-top: 1.5em;
 }
+
+@media (max-width: 767px){
+    .notFoundTitleAndMessage{
+        width:90%;
+        text-align: center;
+        margin: auto;
+    }
+}
