@@ -10,7 +10,7 @@ export function NotFound() {
         <p className="notFoundMessage">
           The task you are looking for doesnt exist
         </p>
-        <div className="falseTask">prueba</div>
+        <div className="falseTask">Enter a valid URL</div>
       </div>
     </div>
   )

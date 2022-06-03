@@ -7,6 +7,10 @@
     padding-left: 0px;
 }
 
+li:nth-child(+n+4){
+    display: none;
+}
+
 .todos{
     display: flex;
     gap:20px;
@@ -52,6 +56,7 @@
     color: white;
     font-size: 12px;
     text-align: center;
+    max-height: 29px;
 }
 
 .lastp{
@@ -87,13 +92,14 @@
     }
 
     .taskFirstRow{
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 5px;
     }
 
     .taskFirstRow span{
         margin: 0;
         padding: 7px 0px 5px 0px;
-        width: 75%;
+        width: 50%;
     }
 }

@@ -6,9 +6,10 @@
     justify-content: center;
     align-items: flex-start;
     padding-left: 2em;
+    padding-right: 3em;
     background-color: white;
     border-right: 1px solid #D8D8D8;
-    width: 30%;
+    max-width: 30%;
     border-bottom-left-radius: 0.6em;
     border-top-left-radius: 0.6em;
 }
@@ -38,6 +39,6 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
     .categoriesTask {
-        width: 40%;
+        width: 30%;
     }
 }

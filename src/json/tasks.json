@@ -15,9 +15,9 @@
     },
     {
         "id": 3,
-        "name": "Study React JS",
+        "name": "Pay electricity and water bill",
         "date": "2021-07-01",
-        "category": "College",
+        "category": "Payments",
         "comment": "I need to review components"
     },
     {
