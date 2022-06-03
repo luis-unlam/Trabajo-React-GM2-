@@ -51,6 +51,7 @@
     border-radius: 4px;
     color: white;
     font-size: 12px;
+    text-align: center;
 }
 
 .lastp{
@@ -83,5 +84,16 @@
 @media (max-width: 767px){
     .inputCheckTodoContainer{
         display: none;
+    }
+
+    .taskFirstRow{
+        display: grid;
+        gap: 5px;
+    }
+
+    .taskFirstRow span{
+        margin: 0;
+        padding: 7px 0px 5px 0px;
+        width: 75%;
     }
 }
