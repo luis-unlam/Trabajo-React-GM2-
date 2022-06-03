@@ -28,11 +28,6 @@
   width: 120px;
 }
 
-.inputDate,
-.inputLabel {
-  margin-right: 3.5em;
-}
-
 .inputLabel{
   margin-bottom:30px;
 }
@@ -54,11 +49,6 @@
   color: var(--button-cancel);
   padding-top:15px;
 }
-
-.cancelButton,
-  .saveButton{
-    width: 15%;
-  }
   
 .backButton{
   display: block;
@@ -136,14 +126,5 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .date{
     margin-bottom: -1em;
-  }
-
-  .inputDate ,
-  .inputLabel{
-    margin-right: 2em;
-  }
-  .cancelButton,
-  .saveButton{
-    width: 20%;
   }
 }

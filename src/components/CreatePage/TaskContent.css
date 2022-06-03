@@ -8,7 +8,7 @@
 .formTaskContent{
   display:flex;
   flex-direction:column;
-  margin: 1.8em 0 0 5.75em;
+  margin: 1.8em 3em 0 5.75em;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
@@ -18,7 +18,7 @@
 }
 
 .inputLabel, .inputComment, .inputDate{
-  width: 90%;
+  width: 100%;
   background-color: var(--background-color-task);
   padding-left: 1em;
 }
@@ -26,11 +26,6 @@
 .pDate, .pLabel{
   margin-right: 5em;
   width: 120px;
-}
-
-.inputDate,
-.inputLabel {
-  margin-right: 3.5em;
 }
 
 .inputLabel{
@@ -132,11 +127,6 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .date{
     margin-bottom: -1em;
-  }
-
-  .inputDate ,
-  .inputLabel{
-    margin-right: 2em;
-  }
+  } 
 }
   
