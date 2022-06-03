@@ -14,7 +14,7 @@ export function AllTodos() {
             <div className="infoTask">
               <div className="taskFirstRow">
                 <p>{todo.name}</p>
-                <p>{todo.category}</p>
+                <span>{todo.category}</span>
               </div>
               <p className="thirdp">Due date: {todo.date}</p>
               <p className="lastp">{todo.comment}</p>

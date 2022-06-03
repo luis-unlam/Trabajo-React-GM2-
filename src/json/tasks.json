@@ -12,6 +12,48 @@
         "date": "2021-07-06",
         "category": "Groceries",
         "comment": "Apple, orange, meat, rice"
+    },
+    {
+        "id": 3,
+        "name": "Study React JS",
+        "date": "2021-07-01",
+        "category": "College",
+        "comment": "I need to review components"
+    },
+    {
+        "id": 4,
+        "name": "Buy food",
+        "date": "2021-07-06",
+        "category": "Groceries",
+        "comment": "Apple, orange, meat, rice"
+    },
+    {
+        "id": 5,
+        "name": "Study React JS",
+        "date": "2021-07-01",
+        "category": "College",
+        "comment": "I need to review components"
+    },
+    {
+        "id": 6,
+        "name": "Buy food",
+        "date": "2021-07-06",
+        "category": "Groceries",
+        "comment": "Apple, orange, meat, rice"
+    },
+    {
+        "id": 7,
+        "name": "Study React JS",
+        "date": "2021-07-01",
+        "category": "College",
+        "comment": "I need to review components"
+    },
+    {
+        "id": 8,
+        "name": "Buy food",
+        "date": "2021-07-06",
+        "category": "Groceries",
+        "comment": "Apple, orange, meat, rice"
     }
 ]
  

@@ -3,7 +3,6 @@
     display: flex;
     gap: 20px;
     flex-direction: column;
-    margin-top: 20px;
     width: 100%;
     padding-left: 0px;
 }
@@ -16,7 +15,7 @@
 
 .inputCheckTodoContainer{
     border: 1px solid red;
-    width: 28px;
+    min-width: 28px;
     height: 28px;
     border-radius: 8px;
 }
@@ -45,7 +44,7 @@
     font-size: 24px;
 }
 
-.taskFirstRow p:last-child{
+.taskFirstRow span{
     background-color: #EA5959;
     padding: 7px 32px 0px 32px;
     margin-left: 23px;
@@ -79,4 +78,10 @@
     color: red;
     background-color: white;
     border: none;
+}
+
+@media (max-width: 767px){
+    .inputCheckTodoContainer{
+        display: none;
+    }
 }

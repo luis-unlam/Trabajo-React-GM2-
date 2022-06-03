@@ -7,7 +7,9 @@ export function ViewTasks() {
     <form className="formTask">
       <h1>All Tasks</h1>
       <input placeholder="Buscar" className="inputTask" />
-      <AllTodos />
+      <div className="containerAllTodos">
+        <AllTodos />
+      </div>
       <NavLink to="/createPage">
         <button type="button" className="buttonNewTask">
           +
