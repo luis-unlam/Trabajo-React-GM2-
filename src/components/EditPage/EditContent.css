@@ -5,6 +5,16 @@
   width: 100%;
 }
 
+.containerButtons{
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 36px;
+  margin-right: 43px;
+}
+
 .formTaskContent{
   display:flex;
   flex-direction:column;
@@ -107,10 +117,6 @@
       width: 0;
     }
 
-  .cancelButton {
-     margin-right: 220px;
-  }
-
   .backButton {
     width: 3.5em;
     height: 3.5em;
@@ -126,5 +132,12 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .date{
     margin-bottom: -1em;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 426px){
+  .cancelButton,
+  .saveButton{
+    width: 7em;
   }
 }

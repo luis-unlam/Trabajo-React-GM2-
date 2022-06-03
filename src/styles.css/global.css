@@ -66,12 +66,12 @@ h4 {
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     right: 0;
     margin-right: 43px;
     margin-bottom: 49px;
-    cursor: pointer;
+    cursor: pointer; */
   }
 
   .cancelButtonEdit ,
@@ -87,12 +87,12 @@ h4 {
     font-weight: 700;
     font-size: 18px;
     color: #787878;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     right: 0;
     margin-right: 220px;
     margin-bottom: 49px; 
-    cursor: pointer;
+    cursor: pointer; */
   }
 
 @media (max-width: 767px) {

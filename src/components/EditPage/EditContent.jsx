@@ -39,15 +39,16 @@ export function EditContent() {
           className="inputComment"
           defaultValue={todo.comment}
         />
-
-        <NavLink className="navButton" to="/">
-          <button type="button" className="cancelButton">
-            Cancel
+        <div className="containerButtons">
+          <NavLink className="navButton" to="/">
+            <button type="button" className="cancelButton">
+              Cancel
+            </button>
+          </NavLink>
+          <button type="button" className="saveButton">
+            Save
           </button>
-        </NavLink>
-        <button type="button" className="saveButton">
-          Save
-        </button>
+        </div>
       </form>
     </div>
   )

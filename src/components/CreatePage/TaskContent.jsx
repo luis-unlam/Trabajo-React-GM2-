@@ -20,15 +20,16 @@ export function TaskContent() {
           <input placeholder="Empty" className="inputDate" />
         </div>
         <input placeholder="Add a comment" className="inputComment" />
-
-        <NavLink className="navButton" to="/">
-          <button type="button" className="cancelButton">
-            Cancel
+        <div className="containerButtons">
+          <NavLink className="navButton" to="/">
+            <button type="button" className="cancelButton">
+              Cancel
+            </button>
+          </NavLink>
+          <button type="button" className="saveButton">
+            Save
           </button>
-        </NavLink>
-        <button type="button" className="saveButton">
-          Save
-        </button>
+        </div>
       </form>
     </div>
   )
