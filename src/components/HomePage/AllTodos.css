@@ -7,7 +7,7 @@
     padding-left: 0px;
 }
 
-li:nth-child(+n+4){
+li:nth-child(+n+7){
     display: none;
 }
 
@@ -57,6 +57,7 @@ li:nth-child(+n+4){
     font-size: 12px;
     text-align: center;
     max-height: 29px;
+    margin-right: 10px;
 }
 
 .lastp{
@@ -84,6 +85,20 @@ li:nth-child(+n+4){
     color: red;
     background-color: white;
     border: none;
+}
+
+@media (max-width: 1023px) and (min-width: 768px){
+    .taskFirstRow{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .taskFirstRow span{
+        margin: 0;
+        padding: 7px 0px 5px 0px;
+        width: 70%;
+    }
 }
 
 @media (max-width: 767px){
