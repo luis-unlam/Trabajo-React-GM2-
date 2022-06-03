@@ -1,11 +1,11 @@
 import './EditTask.css'
 
-import { TaskContent } from '../CreatePage/TaskContent'
+import { EditContent } from './EditContent'
 
 export function EditTask() {
   return (
     <div className="containerEditTask">
-      <TaskContent />
+      <EditContent />
     </div>
   )
 }
