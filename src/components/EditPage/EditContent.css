@@ -40,7 +40,6 @@
 .inputDate{
   margin-bottom:60px;
 }
-
 .label, .date{
   display:flex;
   color: rgba(120, 120, 120, 0.5)
@@ -55,6 +54,11 @@
   color: var(--button-cancel);
   padding-top:15px;
 }
+
+.cancelButton,
+  .saveButton{
+    width: 15%;
+  }
   
 .backButton{
   display: block;
