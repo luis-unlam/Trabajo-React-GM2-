@@ -1,8 +1,23 @@
 import './AllTodos.css'
 import { NavLink } from 'react-router-dom'
-import todos from '../../json/tasks.json'
+import { useEffect, useState } from 'react'
+
+const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 
 export function AllTodos() {
+  const [todos, setTodos] = useState([])
+
+  const obtenerTodos = async () => {
+    const data = await fetch(`${url}tasks`)
+    const resultTodos = await data.json()
+    setTodos(resultTodos)
+    console.log(resultTodos)
+  }
+
+  useEffect(() => {
+    obtenerTodos()
+  }, [])
+
   return (
     <ul className="allTodos">
       {todos.map((todo) => (
