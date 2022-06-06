@@ -5,9 +5,16 @@ import { useState } from 'react'
 
 export function TaskContent() {
   const [name, setName] = useState('')
-  const [label, setLabel] = useState('')
+  const [category, setCategory] = useState('')
   const [date, setDate] = useState('')
   const [comment, setComment] = useState('')
+
+  function resetForm() {
+    setName('')
+    setCategory('')
+    setDate('')
+    setComment('')
+  }
 
   const onHandleSubmit = (e) => {
     e.preventDefault()
@@ -15,7 +22,7 @@ export function TaskContent() {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: '1', name, label, date, comment }),
+      body: JSON.stringify({ id: '1', name, category, date, comment }),
     }
 
     fetch(
@@ -24,13 +31,6 @@ export function TaskContent() {
     )
       .then((response) => response.json())
       .then((result) => console.log(result))
-  }
-
-  function resetForm() {
-    setName('')
-    setLabel('')
-    setDate('')
-    setComment('')
   }
 
   return (
@@ -51,7 +51,7 @@ export function TaskContent() {
           <input
             placeholder="Empty"
             className="inputLabel"
-            onChange={(event) => setLabel(event.target.value)}
+            onChange={(event) => setCategory(event.target.value)}
           />
         </div>
         <div className="date">
