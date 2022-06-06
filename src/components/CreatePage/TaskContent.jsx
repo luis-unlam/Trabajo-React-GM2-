@@ -11,7 +11,19 @@ export function TaskContent() {
 
   const onHandleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, label, date, comment)
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: '1', name, label, date, comment }),
+    }
+
+    fetch(
+      'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks',
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => console.log(result))
   }
 
   function resetForm() {
@@ -20,34 +32,6 @@ export function TaskContent() {
     setDate('')
     setComment('')
   }
-
-  /*
-
-  async postData() {
-
-    try {
-      const result = fetch(
-        'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks',
-        {
-          method: 'post',
-          mode: 'no-cors',
-          headers: {
-            Accept: 'application/json',
-            'Content-type': 'aplication/json',
-          },
-          body: JSON.stringify({
-            key: 'id',
-          })
-        }
-      )
-
-      console.log(result)
-
-    } catch (error) {
-      console.log(error)
-    }
-  };
-  */
 
   return (
     <div className="taskContent">
