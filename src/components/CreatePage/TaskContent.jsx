@@ -77,9 +77,15 @@ export function TaskContent() {
               Cancel
             </button>
           </NavLink>
-          <button type="submit" className="saveButton" onClick={onHandleSubmit}>
-            Save
-          </button>
+          <NavLink className="navButton" to="/">
+            <button
+              type="submit"
+              className="saveButton"
+              onClick={onHandleSubmit}
+            >
+              Save
+            </button>
+          </NavLink>
         </div>
       </form>
     </div>
