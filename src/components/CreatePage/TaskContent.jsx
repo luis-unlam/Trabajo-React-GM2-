@@ -2,6 +2,8 @@
 import './TaskContent.css'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
+// eslint-disable-next-line import/named
+import { BasicDatePicker } from './BasicDatePicker'
 
 export function TaskContent() {
   const [name, setName] = useState('')
@@ -56,11 +58,7 @@ export function TaskContent() {
         </div>
         <div className="date">
           <p className="pDate">Due Date</p>
-          <input
-            placeholder="Empty"
-            className="inputDate"
-            onChange={(event) => setDate(event.target.value)}
-          />
+          <BasicDatePicker />
         </div>
         <input
           placeholder="Add a comment"
