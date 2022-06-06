@@ -48,7 +48,8 @@
 
 .label, .date{
   display:flex;
-  color: rgba(120, 120, 120, 0.5)
+  color: rgba(120, 120, 120, 0.5);
+  padding-bottom: 30px;
 }
 
 .formTaskContent p{
