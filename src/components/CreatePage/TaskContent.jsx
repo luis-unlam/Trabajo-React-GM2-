@@ -13,7 +13,12 @@ export function TaskContent() {
         <input placeholder="Untitled" className="inputTitle" />
         <div className="label">
           <p className="pLabel">Label</p>
-          <input placeholder="Empty" className="inputLabel" />
+          <select name="labels" id="labels">
+            <option value="">Empty</option>
+            <option value="groceries">Groceries</option>
+            <option value="college">College</option>
+            <option value="payments">Payments</option>
+          </select>
         </div>
         <div className="date">
           <p className="pDate">Due Date</p>
