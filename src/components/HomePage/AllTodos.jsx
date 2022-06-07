@@ -65,13 +65,15 @@ export function AllTodos() {
                   <i className="fas fa-edit fa-edit fa-2x" />
                 </button>
               </NavLink>
-              <button
-                type="submit"
-                className="deleteButton"
-                onClick={() => onHandleDelete(todo.id)}
-              >
-                <i className="fas fa-trash-alt fa-delete fa-2x" />
-              </button>
+              <NavLink to="/">
+                <button
+                  type="submit"
+                  className="deleteButton"
+                  onClick={() => onHandleDelete(todo.id)}
+                >
+                  <i className="fas fa-trash-alt fa-delete fa-2x" />
+                </button>
+              </NavLink>
             </div>
           </div>
         </li>
