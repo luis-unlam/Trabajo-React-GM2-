@@ -43,7 +43,7 @@ export function AllTodos() {
       { method: 'DELETE' }
     )
   }
-  // seguir este codigo zzzzz zzzzcambiando el numero al final del link elijo que tarea borrar sewgun el id
+  // si alguno puede seguir este codigo joya,cambiando el numero al final del link elijo que tarea borrar sewgun el id
 
   return (
     <ul className="allTodos">
