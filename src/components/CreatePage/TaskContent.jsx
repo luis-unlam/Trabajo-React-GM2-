@@ -32,6 +32,7 @@ export function TaskContent() {
       requestOptions
     )
       .then((response) => response.json())
+      // eslint-disable-next-line no-console
       .then((result) => console.log(result))
   }
 
