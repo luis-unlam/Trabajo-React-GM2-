@@ -44,6 +44,7 @@ export function AllTodos() {
     )
   }
   // si alguno puede seguir este codigo joya,cambiando el numero al final del link elijo que tarea borrar sewgun el id
+  // me voy a mimir zzzzzz
 
   return (
     <ul className="allTodos">
