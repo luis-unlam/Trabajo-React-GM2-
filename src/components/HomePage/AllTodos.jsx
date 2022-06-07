@@ -32,17 +32,6 @@ export function AllTodos() {
     obtenerTodos()
   }, [])
 
-  // async function deleteHandleSubmit() {
-  //   // eslint-disable-next-line no-console
-  //   console.log('hola')
-  //   const result = await fetch(
-  //     `https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks/4`,
-  //     { method: 'DELETE' }
-  //   )
-  // }
-  // si alguno puede seguir este codigo joya,cambiando el numero al final del link elijo que tarea borrar sewgun el id
-  // me voy a mimir zzzzzz
-
   return (
     <ul className="allTodos">
       {todos.map((todo) => (
