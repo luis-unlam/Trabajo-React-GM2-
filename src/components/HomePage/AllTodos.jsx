@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import './AllTodos.css'
 import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
@@ -11,12 +13,37 @@ export function AllTodos() {
     const data = await fetch(`${url}tasks`)
     const resultTodos = await data.json()
     setTodos(resultTodos)
+    // eslint-disable-next-line no-console
     console.log(resultTodos)
   }
 
   useEffect(() => {
     obtenerTodos()
   }, [])
+
+  // useEffect(() => {
+  //   // DELETE request using fetch with async/await
+  //   async function deletePost() {
+  //     await fetch(
+  //       // eslint-disable-next-line no-template-curly-in-string
+  //       'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks',
+  //       {
+  //         method: 'DELETE',
+  //       }
+  //     )
+  //   }
+  //   deletePost()
+  // }, [])
+
+  async function deleteHandleSubmit() {
+    // eslint-disable-next-line no-console
+    console.log('hola')
+    const result = await fetch(
+      `https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks/4`,
+      { method: 'DELETE' }
+    )
+  }
+  // seguir este codigo zzzzz zzzzcambiando el numero al final del link elijo que tarea borrar sewgun el id
 
   return (
     <ul className="allTodos">
@@ -40,7 +67,11 @@ export function AllTodos() {
                   <i className="fas fa-edit fa-edit fa-2x" />
                 </button>
               </NavLink>
-              <button type="button" className="deleteButton">
+              <button
+                type="button"
+                className="deleteButton"
+                onClick={deleteHandleSubmit}
+              >
                 <i className="fas fa-trash-alt fa-delete fa-2x" />
               </button>
             </div>
