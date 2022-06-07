@@ -59,7 +59,7 @@ export function TaskContent() {
         </div>
         <div className="date">
           <p className="pDate">Due Date</p>
-          <BasicDatePicker onChange={(event) => setDate(event.target.value)} />
+          <BasicDatePicker onChange={(newDate) => setDate(newDate)} />
         </div>
         <input
           placeholder="Add a comment"
