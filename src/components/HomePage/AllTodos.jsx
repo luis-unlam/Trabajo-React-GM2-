@@ -28,6 +28,18 @@ export function AllTodos() {
     })
   }
 
+  function onHandleEdit(todo) {
+    fetch(`${url}tasks/${todo.id}`, {
+      method: 'PUT',
+    }).then((result) => {
+      result.json().then((resp) => {
+        console.warn(resp)
+      })
+    })
+
+    return resp
+  }
+
   useEffect(() => {
     obtenerTodos()
   }, [])

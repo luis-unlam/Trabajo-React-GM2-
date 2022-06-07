@@ -13,14 +13,14 @@ export function EditContent() {
         <input
           placeholder="Untitled"
           className="inputTitle"
-          defaultValue={todo.name}
+          // defaultValue={todo.name}
         />
         <div className="label">
           <p className="pLabel">Label</p>
           <input
             placeholder="Empty"
             className="inputLabel"
-            defaultValue={todo.category}
+            // defaultValue={todo.category}
           />
         </div>
         <div className="date">
@@ -28,13 +28,13 @@ export function EditContent() {
           <input
             placeholder="Empty"
             className="inputDate"
-            defaultValue={todo.date}
+            // defaultValue={todo.date}
           />
         </div>
         <input
           placeholder="Add a comment"
           className="inputComment"
-          defaultValue={todo.comment}
+          // defaultValue={todo.comment}
         />
         <div className="containerButtons">
           <NavLink className="navButton" to="/">
