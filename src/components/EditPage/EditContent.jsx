@@ -1,8 +1,5 @@
 import './EditContent.css'
 import { NavLink } from 'react-router-dom'
-import todos from '../../json/tasks.json'
-
-const todo = { todos }
 
 export function EditContent() {
   return (

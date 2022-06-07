@@ -61,7 +61,11 @@ export function AllTodos() {
             </div>
             <div className="taskButtons">
               <NavLink to="/editPage">
-                <button type="button" className="editButton">
+                <button
+                  type="button"
+                  className="editButton"
+                  onClick={() => onHandleEdit(todo)}
+                >
                   <i className="fas fa-edit fa-edit fa-2x" />
                 </button>
               </NavLink>
