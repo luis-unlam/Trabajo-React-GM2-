@@ -26,7 +26,10 @@
   line-height: 1.3em;
   color: #787878;
 }
-
+.inputTitle{
+  padding: 0 20px;
+  width: 100%;
+}
 .inputLabel, .inputComment, .inputDate{
   width: 100%;
   background-color: var(--background-color-task);
