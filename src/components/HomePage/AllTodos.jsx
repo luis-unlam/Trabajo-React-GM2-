@@ -86,7 +86,7 @@ export function AllTodos() {
                 <p className="lastp">{todo.comment}</p>
               </div>
               <div className="taskButtons">
-                <NavLink to="/editPage">
+                <NavLink to={`/editPage/${todo.id}`}>
                   <button
                     type="button"
                     className="editButton"

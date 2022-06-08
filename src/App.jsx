@@ -11,7 +11,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/EditPage" element={<EditPage />} />
+        <Route path="/EditPage/:id" element={<EditPage />} />
         <Route path="/createPage" element={<CreatePage />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/taskList" element={<TaskListPage />} />

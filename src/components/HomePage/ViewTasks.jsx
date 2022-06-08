@@ -10,7 +10,7 @@ export function ViewTasks() {
       <div className="containerAllTodos">
         <AllTodos />
       </div>
-      <NavLink to="/createPage">
+      <NavLink to="/createPage/">
         <button type="button" className="buttonNewTask">
           +
         </button>
