@@ -27,9 +27,6 @@
     border-radius: 25%;
     vertical-align: middle;
     border: 1px solid #ddd;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
     cursor: pointer;
     border: 1px solid #EA5959;
     /* display: none; */

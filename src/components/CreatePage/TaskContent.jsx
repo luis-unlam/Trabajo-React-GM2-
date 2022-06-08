@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 import './TaskContent.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 // eslint-disable-next-line import/named
 import { BasicDatePicker } from './BasicDatePicker'
@@ -10,6 +10,7 @@ export function TaskContent() {
   const [category, setCategory] = useState('')
   const [date, setDate] = useState('')
   const [comment, setComment] = useState('')
+  const navigate = useNavigate()
 
   function resetForm() {
     setName('')
@@ -18,7 +19,7 @@ export function TaskContent() {
     setComment('')
   }
 
-  const onHandleSubmit = (e) => {
+  const onHandleSubmit = async (e) => {
     e.preventDefault()
 
     const requestOptions = {
@@ -27,13 +28,13 @@ export function TaskContent() {
       body: JSON.stringify({ id: '1', name, category, date, comment }),
     }
 
-    fetch(
+    const response = await fetch(
       'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks',
       requestOptions
     )
-      .then((response) => response.json())
-      // eslint-disable-next-line no-console
-      .then((result) => console.log(result))
+    const parsedResponse = await response.json()
+    console.log(parsedResponse)
+    navigate('/')
   }
 
   return (
@@ -67,24 +68,16 @@ export function TaskContent() {
           onChange={(event) => setComment(event.target.value)}
         />
         <div className="containerButtons">
-          <NavLink className="navButton" to="/">
-            <button
-              type="reset"
-              className="cancelButton"
-              onClick={() => resetForm()}
-            >
-              Cancel
-            </button>
-          </NavLink>
-          <NavLink className="navButton" to="/">
-            <button
-              type="submit"
-              className="saveButton"
-              onClick={onHandleSubmit}
-            >
-              Save
-            </button>
-          </NavLink>
+          <button
+            type="reset"
+            className="cancelButton"
+            onClick={() => resetForm()}
+          >
+            Cancel
+          </button>
+          <button type="submit" className="saveButton" onClick={onHandleSubmit}>
+            Save
+          </button>
         </div>
       </form>
     </div>

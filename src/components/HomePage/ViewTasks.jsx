@@ -18,6 +18,19 @@ export function ViewTasks() {
     console.log(resultTodos)
   }
 
+  const onHandleDelete = (id) => {
+    fetch(`${url}tasks/${id}`, {
+      method: 'DELETE',
+    }).then((result) => {
+      result.json().then((resp) => {
+        console.warn(resp)
+      })
+    })
+
+    const todosFiltered = todos.filter((todo) => todo.id !== id)
+    setTodos(todosFiltered)
+  }
+
   useEffect(() => {
     obtenerTodos()
   }, [])
@@ -48,7 +61,7 @@ export function ViewTasks() {
         className="inputTask"
       />
       <div className="containerAllTodos">
-        <AllTodos todos={results} />
+        <AllTodos todos={results} onHandleDelete={onHandleDelete} />
       </div>
       <NavLink to="/createPage/">
         <button type="button" className="buttonNewTask">

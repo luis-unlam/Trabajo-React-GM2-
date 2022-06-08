@@ -5,19 +5,19 @@
 /* eslint-disable no-undef */
 import './AllTodos.css'
 import { NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 
-export function AllTodos({ todos }) {
-  function onHandleDelete(id) {
-    fetch(`${url}tasks/${id}`, {
-      method: 'DELETE',
-    }).then((result) => {
-      result.json().then((resp) => {
-        console.warn(resp)
-        obtenerTodos()
-      })
-    })
+export function AllTodos({ todos, onHandleDelete }) {
+  const [allTodos, setAllTodos] = useState([])
+
+  const obtenerTodos = async () => {
+    const data = await fetch(`${url}tasks`)
+    const resultTodos = await data.json()
+    setAllTodos(resultTodos)
+    // eslint-disable-next-line no-console
+    console.log(resultTodos)
   }
 
   function onHandleEdit(todo) {
@@ -31,6 +31,10 @@ export function AllTodos({ todos }) {
 
     return resp
   }
+
+  useEffect(() => {
+    obtenerTodos()
+  }, [])
 
   return (
     <div>
@@ -59,15 +63,13 @@ export function AllTodos({ todos }) {
                     <i className="fas fa-edit fa-edit fa-2x" />
                   </button>
                 </NavLink>
-                <NavLink to="/">
-                  <button
-                    type="submit"
-                    className="deleteButton"
-                    onClick={() => onHandleDelete(todo.id)}
-                  >
-                    <i className="fas fa-trash-alt fa-delete fa-2x" />
-                  </button>
-                </NavLink>
+                <button
+                  type="button"
+                  className="deleteButton"
+                  onClick={() => onHandleDelete(todo.id)}
+                >
+                  <i className="fas fa-trash-alt fa-delete fa-2x" />
+                </button>
               </div>
             </div>
           </li>
