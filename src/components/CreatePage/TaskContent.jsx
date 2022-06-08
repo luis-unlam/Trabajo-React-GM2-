@@ -18,7 +18,6 @@ export function TaskContent() {
     setCategory('')
     setDate('')
     setComment('')
-
     navigate('/')
   }
 
