@@ -1,25 +1,14 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable consistent-return */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import './AllTodos.css'
 import { NavLink } from 'react-router-dom'
-import { useEffect, useState } from 'react'
 
 const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 
-export function AllTodos() {
-  const [todos, setTodos] = useState([])
-  const [search, setSearch] = useState('')
-
-  const obtenerTodos = async () => {
-    const data = await fetch(`${url}tasks`)
-    const resultTodos = await data.json()
-    setTodos(resultTodos)
-    // eslint-disable-next-line no-console
-    console.log(resultTodos)
-  }
-
+export function AllTodos({ todos }) {
   function onHandleDelete(id) {
     fetch(`${url}tasks/${id}`, {
       method: 'DELETE',
@@ -43,35 +32,10 @@ export function AllTodos() {
     return resp
   }
 
-  useEffect(() => {
-    obtenerTodos()
-  }, [])
-
-  const searcher = (e) => {
-    setSearch(e.target.value)
-    console.log(e.target.value)
-  }
-
-  let results = []
-  if (!search) {
-    results = todos
-    console.log(results)
-  } else {
-    results = todos.filter((dato) =>
-      dato.name.toLowerCase().includes(search.toLocaleLowerCase())
-    )
-  }
-
   return (
     <div>
-      <input
-        value={search}
-        onChange={searcher}
-        placeholder="Buscar"
-        className="inputTask"
-      />
       <ul className="allTodos">
-        {results.map((todo) => (
+        {todos.map((todo) => (
           <li className="todos" key={todo.id}>
             <div className="inputCheckTodoContainer">
               <input type="checkbox" className="inputCheckTodo" />

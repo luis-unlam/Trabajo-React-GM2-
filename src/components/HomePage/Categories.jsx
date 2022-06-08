@@ -24,7 +24,9 @@ export function Categories() {
         <h4 className="ALL">ALL</h4>
         <li className="li_items">
           {todos.map((todo) => (
-            <h4 className="categoriesTask_item">{todo.category}</h4>
+            <h4 className="categoriesTask_item" key={todo.id}>
+              {todo.category}
+            </h4>
           ))}
         </li>
       </ul>
