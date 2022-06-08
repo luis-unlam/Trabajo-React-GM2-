@@ -3,6 +3,7 @@ import './TaskContent.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 // eslint-disable-next-line import/named
+import { format } from 'date-fns'
 import { BasicDatePicker } from './BasicDatePicker'
 
 export function TaskContent() {
@@ -60,7 +61,12 @@ export function TaskContent() {
         </div>
         <div className="date">
           <p className="pDate">Due Date</p>
-          <BasicDatePicker onChange={(newDate) => setDate(newDate)} />
+          <BasicDatePicker
+            onChange={(newDate) => {
+              const formatDate = format(newDate, 'dd/MM/yyyy')
+              setDate(formatDate)
+            }}
+          />
         </div>
         <input
           placeholder="Add a comment"

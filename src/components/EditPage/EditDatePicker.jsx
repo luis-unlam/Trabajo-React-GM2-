@@ -1,13 +1,19 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import * as React from 'react'
+import { useEffect, useState } from 'react'
 import TextField from '@mui/material/TextField'
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
+import { parse } from 'date-fns'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 
-export function BasicDatePicker({ onChange }) {
-  const [value, setValue] = React.useState(null)
+export function EditDatePicker({ onChange, dueDate }) {
+  const [value, setValue] = useState()
+
+  useEffect(() => {
+    console.log(dueDate)
+    setValue(parse(dueDate, 'dd/MM/yyyy', new Date()))
+  }, [dueDate])
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -15,6 +21,7 @@ export function BasicDatePicker({ onChange }) {
         label="Basic example"
         value={value}
         onChange={(newValue) => {
+          console.log(newValue)
           setValue(newValue)
           onChange(newValue)
         }}

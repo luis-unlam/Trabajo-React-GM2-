@@ -3,6 +3,8 @@ import './EditContent.css'
 import { NavLink } from 'react-router-dom'
 import { useParams } from 'react-router'
 import { useEffect, useState } from 'react'
+import { format } from 'date-fns'
+import { EditDatePicker } from './EditDatePicker'
 
 export function EditContent() {
   const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
@@ -83,11 +85,12 @@ export function EditContent() {
         </div>
         <div className="date">
           <p className="pDate">Due Date</p>
-          <input
-            placeholder="Empty"
-            className="inputDate"
-            defaultValue={todo.date}
-            onChange={(event) => setDate(event.target.value)}
+          <EditDatePicker
+            onChange={(newDate) => {
+              const formatDate = format(newDate, 'dd-MM-yyyy')
+              setDate(formatDate)
+            }}
+            dueDate={todo.date}
           />
         </div>
         <input
