@@ -20,9 +20,14 @@ export function Categories() {
 
   return (
     <nav className="categoriesTask">
-      {todos.map((todo) => (
-        <h4 className="categoriesTask_item">{todo.category}</h4>
-      ))}
+      <ul className="ul_items">
+        <h4 className="ALL">ALL</h4>
+        <li className="li_items">
+          {todos.map((todo) => (
+            <h4 className="categoriesTask_item">{todo.category}</h4>
+          ))}
+        </li>
+      </ul>
     </nav>
   )
 }

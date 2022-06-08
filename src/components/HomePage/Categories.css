@@ -26,8 +26,14 @@
     font-family: 'Lato';
 }
 
-.categoriesTask h4:first-child{
+.ALL{
     color: red;
+}
+.ul_items{
+    list-style:none;
+}
+.li_items{
+    list-style: none;
 }
 
 @media (max-width: 767px) {
