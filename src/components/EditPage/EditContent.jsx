@@ -91,7 +91,7 @@ export function EditContent() {
           <p className="pDate">Due Date</p>
           <EditDatePicker
             onChange={(newDate) => {
-              const formatDate = format(newDate, 'dd-MM-yyyy')
+              const formatDate = format(newDate, 'dd/MM/yyyy')
               setDate(formatDate)
             }}
             dueDate={todo.date}
