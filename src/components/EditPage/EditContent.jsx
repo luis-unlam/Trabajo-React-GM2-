@@ -30,7 +30,7 @@ export function EditContent() {
     e.preventDefault()
 
     const requestOptions = {
-      method: 'POST',
+      method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: '1', name, category, date, comment }),
     }
