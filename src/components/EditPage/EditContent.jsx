@@ -1,10 +1,14 @@
 /* eslint-disable no-return-assign */
 import './EditContent.css'
+<<<<<<< Updated upstream
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router'
 import { useEffect, useState } from 'react'
 import { format } from 'date-fns'
 import { EditDatePicker } from './EditDatePicker'
+=======
+import { NavLink } from 'react-router-dom'
+>>>>>>> Stashed changes
 
 export function EditContent() {
   const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
@@ -113,6 +117,32 @@ export function EditContent() {
             Save
           </button>
         </div>
+        <input placeholder="Untitled" className="inputTitle" />
+        <div className="ItemContentEdit">
+          {/* <input placeholder="Label" className="inputLabelEdit" /> */}
+          <p className="pLabel">Label</p>
+          <input placeholder="Groceries" className="Label_task" />
+        </div>
+        <div className="ItemContentEdit">
+          {/* <input placeholder="Due Date" className="inputDateEdit" /> */}
+          <p className="pLabel">Due Date</p>
+          <input placeholder="xx/xx/xx" className="Due_task" />
+        </div>
+        <input placeholder="" className="inputCompleteEdit" />
+        <p className="inputCommentEdit">Add a comment</p>
+        <input placeholder="" className="inputCompleteEdit" />
+
+        <NavLink className="navButtonEdit" to="/">
+          <button type="button" className="backButton">
+            Back
+          </button>
+        </NavLink>
+        <button type="button" className="cancelButtonEdit">
+          Cancel
+        </button>
+        <button type="button" className="saveButton">
+          Save
+        </button>
       </form>
     </div>
   )
