@@ -12,11 +12,6 @@ export function EditContent() {
   const [todo, setTodo] = useState([])
   const { id } = useParams()
 
-  const [name, setName] = useState('')
-  const [category, setCategory] = useState('')
-  const [date, setDate] = useState('')
-  const [comment, setComment] = useState('')
-
   const navigate = useNavigate()
 
   const obtenerTodo = async () => {
@@ -26,6 +21,11 @@ export function EditContent() {
     // eslint-disable-next-line no-console
     console.log(resultTodos)
   }
+
+  const [name, setName] = useState(todo.name)
+  const [category, setCategory] = useState(todo.category)
+  const [date, setDate] = useState(todo.date)
+  const [comment, setComment] = useState(todo.comment)
 
   // const onHandleEdit = (e) => {
   //   e.preventDefault()
