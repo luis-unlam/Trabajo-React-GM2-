@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 import './EditContent.css'
 import { NavLink } from 'react-router-dom'
 import { useParams } from 'react-router'
@@ -29,19 +30,18 @@ export function EditContent() {
   const onHandleSubmit = (e) => {
     e.preventDefault()
 
+    const element = document.querySelector('#put-request .date-updated')
     const requestOptions = {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: '1', name, category, date, comment }),
     }
 
-    fetch(
-      'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks',
-      requestOptions
-    )
+    fetch(`${url}tasks/${id}`, requestOptions)
       .then((response) => response.json())
       // eslint-disable-next-line no-console
-      .then((result) => console.log(result))
+      // eslint-disable-next-line prettier/prettier
+      .then((data) => (element.innerHTML = data.updatedAt))
   }
 
   return (
