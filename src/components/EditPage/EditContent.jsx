@@ -1,6 +1,6 @@
 /* eslint-disable no-return-assign */
 import './EditContent.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router'
 import { useEffect, useState } from 'react'
 import { format } from 'date-fns'
@@ -16,6 +16,8 @@ export function EditContent() {
   const [category, setCategory] = useState('')
   const [date, setDate] = useState('')
   const [comment, setComment] = useState('')
+
+  const navigate = useNavigate()
 
   const obtenerTodo = async () => {
     const data = await fetch(`${url}tasks/${id}`)
@@ -58,6 +60,8 @@ export function EditContent() {
       // eslint-disable-next-line no-console
       // eslint-disable-next-line prettier/prettier
       .then((data) => (element.innerHTML = data.updatedAt))
+
+    navigate('/')
   }
 
   return (
@@ -105,15 +109,9 @@ export function EditContent() {
               Cancel
             </button>
           </NavLink>
-          <NavLink className="navButton" to="/">
-            <button
-              type="button"
-              className="saveButton"
-              onClick={onHandleSubmit}
-            >
-              Save
-            </button>
-          </NavLink>
+          <button type="button" className="saveButton" onClick={onHandleSubmit}>
+            Save
+          </button>
         </div>
       </form>
     </div>
