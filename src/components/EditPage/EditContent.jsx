@@ -32,24 +32,28 @@ export function EditContent() {
         <input
           placeholder="Untitled"
           className="inputTitle"
-          value={todo.name}
+          defaultValue={todo.name}
         />
         <div className="label">
           <p className="pLabel">Label</p>
           <input
             placeholder="Empty"
             className="inputLabel"
-            value={todo.category}
+            defaultValue={todo.category}
           />
         </div>
         <div className="date">
           <p className="pDate">Due Date</p>
-          <input placeholder="Empty" className="inputDate" value={todo.date} />
+          <input
+            placeholder="Empty"
+            className="inputDate"
+            defaultValue={todo.date}
+          />
         </div>
         <input
           placeholder="Add a comment"
           className="inputComment"
-          value={todo.comment}
+          defaultValue={todo.comment}
         />
         <div className="containerButtons">
           <NavLink className="navButton" to="/">
