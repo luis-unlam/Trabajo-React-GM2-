@@ -9,6 +9,11 @@ export function EditContent() {
   const [todo, setTodo] = useState([])
   const { id } = useParams()
 
+  const [name, setName] = useState('')
+  const [category, setCategory] = useState('')
+  const [date, setDate] = useState('')
+  const [comment, setComment] = useState('')
+
   const obtenerTodo = async () => {
     const data = await fetch(`${url}tasks/${id}`)
     const resultTodos = await data.json()
@@ -20,6 +25,24 @@ export function EditContent() {
   useEffect(() => {
     obtenerTodo()
   }, [])
+
+  const onHandleSubmit = (e) => {
+    e.preventDefault()
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: '1', name, category, date, comment }),
+    }
+
+    fetch(
+      'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks',
+      requestOptions
+    )
+      .then((response) => response.json())
+      // eslint-disable-next-line no-console
+      .then((result) => console.log(result))
+  }
 
   return (
     <div className="taskContent">
@@ -33,6 +56,7 @@ export function EditContent() {
           placeholder="Untitled"
           className="inputTitle"
           defaultValue={todo.name}
+          onChange={(event) => setName(event.target.value)}
         />
         <div className="label">
           <p className="pLabel">Label</p>
@@ -40,6 +64,7 @@ export function EditContent() {
             placeholder="Empty"
             className="inputLabel"
             defaultValue={todo.category}
+            onChange={(event) => setCategory(event.target.value)}
           />
         </div>
         <div className="date">
@@ -48,12 +73,14 @@ export function EditContent() {
             placeholder="Empty"
             className="inputDate"
             defaultValue={todo.date}
+            onChange={(event) => setDate(event.target.value)}
           />
         </div>
         <input
           placeholder="Add a comment"
           className="inputComment"
           defaultValue={todo.comment}
+          onChange={(event) => setComment(event.target.value)}
         />
         <div className="containerButtons">
           <NavLink className="navButton" to="/">
@@ -61,9 +88,15 @@ export function EditContent() {
               Cancel
             </button>
           </NavLink>
-          <button type="button" className="saveButton">
-            Save
-          </button>
+          <NavLink className="navButton" to="/">
+            <button
+              type="button"
+              className="saveButton"
+              onClick={onHandleSubmit}
+            >
+              Save
+            </button>
+          </NavLink>
         </div>
       </form>
     </div>
