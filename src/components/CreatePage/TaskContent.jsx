@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 import './TaskContent.css'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 // eslint-disable-next-line import/named
 import { format } from 'date-fns'
@@ -18,6 +18,8 @@ export function TaskContent() {
     setCategory('')
     setDate('')
     setComment('')
+
+    navigate('/')
   }
 
   const onHandleSubmit = async (e) => {
@@ -40,11 +42,9 @@ export function TaskContent() {
 
   return (
     <div className="taskContent">
-      <NavLink to="/" className="navButton">
-        <button type="button" className="backButton">
-          <i className="fa-solid fa-arrow-left fa-2xl" />
-        </button>
-      </NavLink>
+      <button type="button" className="backButton" onClick={() => resetForm()}>
+        <i className="fa-solid fa-arrow-left fa-2xl" />
+      </button>
       <form className="formTaskContent">
         <input
           placeholder="Untitled"
