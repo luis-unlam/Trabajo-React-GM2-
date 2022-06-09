@@ -1,6 +1,6 @@
 /* eslint-disable no-return-assign */
 import './EditContent.css'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router'
 import { useEffect, useState } from 'react'
 import { format } from 'date-fns'
@@ -11,19 +11,26 @@ export function EditContent() {
 
   const [todo, setTodo] = useState([])
   const { id } = useParams()
+  const [name, setName] = useState(todo.name)
+  const [category, setCategory] = useState(todo.category)
+  const [date, setDate] = useState(todo.date)
+  const [comment, setComment] = useState(todo.comment)
 
   const navigate = useNavigate()
+
+  function resetForm() {
+    setName('')
+    setCategory('')
+    setDate('')
+    setComment('')
+    navigate('/')
+  }
 
   const getTodo = async () => {
     const data = await fetch(`${url}tasks/${id}`)
     const resultTodos = await data.json()
     setTodo(resultTodos)
   }
-
-  const [name, setName] = useState(todo.name)
-  const [category, setCategory] = useState(todo.category)
-  const [date, setDate] = useState(todo.date)
-  const [comment, setComment] = useState(todo.comment)
 
   // const onHandleEdit = (e) => {
   //   e.preventDefault()
@@ -62,11 +69,9 @@ export function EditContent() {
 
   return (
     <div className="taskContent">
-      <NavLink to="/" className="navButton">
-        <button type="button" className="backButton">
-          <i className="fa-solid fa-arrow-left fa-2xl" />
-        </button>
-      </NavLink>
+      <button type="button" className="backButton" onClick={() => resetForm()}>
+        <i className="fa-solid fa-arrow-left fa-2xl" />
+      </button>
       <form className="formTaskContent">
         <input
           placeholder="Untitled"
@@ -100,11 +105,13 @@ export function EditContent() {
           onChange={(event) => setComment(event.target.value)}
         />
         <div className="containerButtons">
-          <NavLink className="navButton" to="/">
-            <button type="button" className="cancelButton">
-              Cancel
-            </button>
-          </NavLink>
+          <button
+            type="button"
+            className="cancelButton"
+            onClick={() => resetForm()}
+          >
+            Cancel
+          </button>
           <button type="button" className="saveButton" onClick={onHandleSubmit}>
             Save
           </button>

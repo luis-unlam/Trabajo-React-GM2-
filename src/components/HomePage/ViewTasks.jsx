@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
 import { useState, useEffect } from 'react'
 import './ViewTasks.css'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { AllTodos } from './AllTodos'
 
 const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
@@ -59,11 +59,11 @@ export function ViewTasks() {
       <div className="containerAllTodos">
         <AllTodos todos={results} onHandleDelete={onHandleDelete} />
       </div>
-      <NavLink to="/createPage/">
+      <Link to="/createPage/">
         <button type="button" className="buttonNewTask">
           +
         </button>
-      </NavLink>
+      </Link>
     </form>
   )
 }
