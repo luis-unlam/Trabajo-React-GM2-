@@ -10,8 +10,9 @@ import { act } from 'react-dom/test-utils'
 
 const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 
-export function AllTodos({ todos, onHandleDelete }) {
+export function AllTodos({ todos, date, onHandleDelete }) {
   const [allTodos, setAllTodos] = useState([])
+  const [lateTask, setLateTask] = useState(false)
 
   const getTodos = async () => {
     const data = await fetch(`${url}tasks`)
@@ -19,8 +20,34 @@ export function AllTodos({ todos, onHandleDelete }) {
     setAllTodos(resultTodos)
   }
 
+  const calcDate = () => {
+    console.log(date)
+    const dateTask = new Date(date)
+    console.log(date)
+    console.log(todos)
+    const actualDate = new Date()
+    if (dateTask < actualDate) {
+      setLateTask(true)
+    } else {
+      setLateTask(false)
+    }
+  }
+
+  function onHandleEdit(todo) {
+    fetch(`${url}tasks/${todo.id}`, {
+      method: 'PUT',
+    }).then((result) => {
+      result.json().then((resp) => {
+        console.warn(resp)
+      })
+    })
+
+    return resp
+  }
+
   useEffect(() => {
     getTodos()
+    calcDate()
   }, [])
 
   return (
@@ -31,7 +58,7 @@ export function AllTodos({ todos, onHandleDelete }) {
             <div className="inputCheckTodoContainer">
               <input type="checkbox" className="inputCheckTodo" />
             </div>
-            <div className="completeTask">
+            <div className={lateTask ? 'todosLate' : 'completeTask'}>
               <div className="infoTask">
                 <div className="taskFirstRow">
                   <p>{todo.name}</p>

@@ -28,11 +28,13 @@
 }
 .inputTitle{
   width: 100%;
+  outline: none;
 }
 .inputLabel, .inputComment, .inputDate{
   width: 100%;
   background-color: var(--background-color-task);
   padding-left: 1em;
+  outline: none;
 }
 
 .inputComment{

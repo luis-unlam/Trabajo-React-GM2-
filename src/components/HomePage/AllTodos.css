@@ -41,6 +41,15 @@
     justify-content: space-between;
 }
 
+.todosLate{
+    border: solid 1px red;
+    border-radius: 8px;
+    padding: 10px 10px 10px 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .taskFirstRow{
     display: flex;
     margin-bottom: 5px;
