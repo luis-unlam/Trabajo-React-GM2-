@@ -4,16 +4,23 @@ import { useEffect, useState } from 'react'
 const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 
 export function Categories() {
-  const [todos, setTodos] = useState([])
+  const [categories, setCategories] = useState([])
 
-  const getTodos = async () => {
+  const getCategories = async () => {
     const data = await fetch(`${url}tasks`)
     const resultTodos = await data.json()
-    setTodos(resultTodos)
+    const tasksCategories = resultTodos.map((element) => element.category)
+    const filteredCategories = []
+    tasksCategories.forEach((element) => {
+      if (!filteredCategories.includes(element)) {
+        filteredCategories.push(element)
+      }
+    })
+    setCategories(filteredCategories)
   }
 
   useEffect(() => {
-    getTodos()
+    getCategories()
   }, [])
 
   return (
@@ -21,9 +28,9 @@ export function Categories() {
       <ul className="ul_items">
         <h4 className="ALL">All</h4>
         <li className="li_items">
-          {todos.map((todo) => (
-            <h4 className="categoriesTask_item" key={todo.id}>
-              {todo.category}
+          {categories.map((category) => (
+            <h4 className="categoriesTask_item" key={category}>
+              {category}
             </h4>
           ))}
         </li>

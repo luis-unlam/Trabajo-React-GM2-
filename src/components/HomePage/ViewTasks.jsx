@@ -57,11 +57,7 @@ export function ViewTasks() {
         className="inputTask"
       />
       <div className="containerAllTodos">
-        <AllTodos
-          todos={results}
-          date={results.date}
-          onHandleDelete={onHandleDelete}
-        />
+        <AllTodos todos={results} onHandleDelete={onHandleDelete} />
       </div>
       <Link to="/createPage/">
         <button type="button" className="buttonNewTask">

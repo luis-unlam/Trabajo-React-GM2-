@@ -10,7 +10,7 @@ import { act } from 'react-dom/test-utils'
 
 const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 
-export function AllTodos({ todos, date, onHandleDelete }) {
+export function AllTodos({ todos, onHandleDelete }) {
   const [allTodos, setAllTodos] = useState([])
   const [lateTask, setLateTask] = useState(false)
 
@@ -21,15 +21,14 @@ export function AllTodos({ todos, date, onHandleDelete }) {
   }
 
   const calcDate = () => {
-    console.log(date)
-    const dateTask = new Date(date)
-    console.log(date)
-    console.log(todos)
+    const dateTask = new Date()
     const actualDate = new Date()
-    if (dateTask < actualDate) {
+    if (dateTask > actualDate) {
+      console.log('te pasaste')
       setLateTask(true)
     } else {
       setLateTask(false)
+      console.log('no te pasaste')
     }
   }
 
