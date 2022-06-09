@@ -37,7 +37,6 @@ export function ViewTasks() {
   if (!search) {
     results = todos
   } else {
-    console.log(search)
     results = todos.filter((dato) =>
       dato.name.toLowerCase().includes(search.toLocaleLowerCase())
     )
