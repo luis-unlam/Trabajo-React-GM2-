@@ -21,7 +21,7 @@ This project was made by members of the GM2 Academy.
 
 ## Resources
 
-- [API](https://mockapi.io/projects/6297eb2e8d77ad6f750aadad)
+- [API](https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/tasks)
 - [Design](<https://www.figma.com/file/5ce5dtJ1SA9lkwGloTJWs1/TODO-App-(Community)-(Copy)?node-id=0%3A1>)
 
 ## Available Scripts
