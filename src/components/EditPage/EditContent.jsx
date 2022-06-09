@@ -14,7 +14,7 @@ export function EditContent() {
 
   const navigate = useNavigate()
 
-  const obtenerTodo = async () => {
+  const getTodo = async () => {
     const data = await fetch(`${url}tasks/${id}`)
     const resultTodos = await data.json()
     setTodo(resultTodos)
@@ -40,7 +40,7 @@ export function EditContent() {
   // }
 
   useEffect(() => {
-    obtenerTodo()
+    getTodo()
   }, [])
 
   const onHandleSubmit = (e) => {

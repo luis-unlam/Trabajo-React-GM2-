@@ -12,7 +12,7 @@ const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 export function AllTodos({ todos, onHandleDelete }) {
   const [allTodos, setAllTodos] = useState([])
 
-  const obtenerTodos = async () => {
+  const getTodos = async () => {
     const data = await fetch(`${url}tasks`)
     const resultTodos = await data.json()
     setAllTodos(resultTodos)
@@ -31,7 +31,7 @@ export function AllTodos({ todos, onHandleDelete }) {
   }
 
   useEffect(() => {
-    obtenerTodos()
+    getTodos()
   }, [])
 
   return (

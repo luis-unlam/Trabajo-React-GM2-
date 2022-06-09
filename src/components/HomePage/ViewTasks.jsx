@@ -10,7 +10,7 @@ export function ViewTasks() {
   const [search, setSearch] = useState('')
   const [todos, setTodos] = useState([])
 
-  const obtenerTodos = async () => {
+  const getTodos = async () => {
     const data = await fetch(`${url}tasks`)
     const resultTodos = await data.json()
     setTodos(resultTodos)
@@ -30,7 +30,7 @@ export function ViewTasks() {
   }
 
   useEffect(() => {
-    obtenerTodos()
+    getTodos()
   }, [])
 
   let results = []
@@ -53,7 +53,7 @@ export function ViewTasks() {
       <input
         value={search}
         onChange={searcher}
-        placeholder="Buscar"
+        placeholder="Search"
         className="inputTask"
       />
       <div className="containerAllTodos">
