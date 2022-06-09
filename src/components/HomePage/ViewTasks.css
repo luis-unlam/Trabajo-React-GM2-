@@ -52,6 +52,9 @@
   color:white;
 }
 
+.lineAllTasks{
+  display: none;
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .inputTask {
@@ -72,5 +75,14 @@
 
     .inputTask {
       width: 100%;
+    }
+
+    .lineAllTasks{
+      display: block;
+      background-color: #D8D8D8;
+      height: 1px;
+      border: 1px solid #D8D8D8;
+      width: 100%;
+      margin-top: 19px;
     }
 }

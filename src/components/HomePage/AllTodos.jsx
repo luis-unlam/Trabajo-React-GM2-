@@ -6,6 +6,7 @@
 import './AllTodos.css'
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { act } from 'react-dom/test-utils'
 
 const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 

@@ -27,13 +27,21 @@
   color: #787878;
 }
 .inputTitle{
-  padding: 0 20px;
   width: 100%;
 }
 .inputLabel, .inputComment, .inputDate{
   width: 100%;
   background-color: var(--background-color-task);
   padding-left: 1em;
+}
+
+.inputComment{
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  background-color: white;
+  border-radius:0;
 }
 
 .pDate, .pLabel{
@@ -52,6 +60,9 @@
 .label, .date{
   display:flex;
   color: rgba(120, 120, 120, 0.5);
+}
+
+.date{
   padding-bottom: 30px;
 }
 
@@ -100,18 +111,22 @@
 
 @media (max-width: 767px) {
   .formTaskContent {
-    height: 70%;
+    height: 100%;
     width: 70%;
     margin: auto;
     margin-top: 2.2em;
   }
 
   .containerButtons{
-    justify-content: space-around;
     position: relative;
     margin-right: 0;
     margin-top: 50px;
+    margin-bottom: 0;
   }
+
+.saveButton{
+  margin: 0;
+}
 
     .inputTitle{
       font-size: 1.3em;

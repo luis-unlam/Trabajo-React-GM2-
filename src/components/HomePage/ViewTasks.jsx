@@ -50,6 +50,7 @@ export function ViewTasks() {
   return (
     <form className="formTask">
       <h1>All Tasks</h1>
+      <hr className="lineAllTasks" />
       <input
         value={search}
         onChange={searcher}
