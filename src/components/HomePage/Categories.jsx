@@ -10,8 +10,6 @@ export function Categories() {
     const data = await fetch(`${url}tasks`)
     const resultTodos = await data.json()
     setTodos(resultTodos)
-    // eslint-disable-next-line no-console
-    console.log(resultTodos)
   }
 
   useEffect(() => {

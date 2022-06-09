@@ -18,8 +18,6 @@ export function EditContent() {
     const data = await fetch(`${url}tasks/${id}`)
     const resultTodos = await data.json()
     setTodo(resultTodos)
-    // eslint-disable-next-line no-console
-    console.log(resultTodos)
   }
 
   const [name, setName] = useState(todo.name)
@@ -57,8 +55,6 @@ export function EditContent() {
 
     fetch(`${url}tasks/${id}`, requestOptions)
       .then((response) => response.json())
-      // eslint-disable-next-line no-console
-      // eslint-disable-next-line prettier/prettier
       .then((data) => (element.innerHTML = data.updatedAt))
 
     navigate('/')

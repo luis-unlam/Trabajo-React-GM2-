@@ -35,6 +35,7 @@ export function TaskContent() {
       requestOptions
     )
     const parsedResponse = await response.json()
+    // eslint-disable-next-line no-console
     console.log(parsedResponse)
     navigate('/')
   }

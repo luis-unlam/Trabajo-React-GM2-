@@ -14,8 +14,6 @@ export function ViewTasks() {
     const data = await fetch(`${url}tasks`)
     const resultTodos = await data.json()
     setTodos(resultTodos)
-    // eslint-disable-next-line no-console
-    console.log(resultTodos)
   }
 
   const onHandleDelete = (id) => {
@@ -38,7 +36,6 @@ export function ViewTasks() {
   let results = []
   if (!search) {
     results = todos
-    console.log(results)
   } else {
     console.log(search)
     results = todos.filter((dato) =>
@@ -48,7 +45,6 @@ export function ViewTasks() {
 
   const searcher = (e) => {
     setSearch(e.target.value)
-    console.log(e.target.value)
   }
 
   return (

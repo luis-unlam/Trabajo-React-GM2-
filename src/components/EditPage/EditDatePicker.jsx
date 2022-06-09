@@ -11,7 +11,6 @@ export function EditDatePicker({ onChange, dueDate }) {
   const [value, setValue] = useState()
 
   useEffect(() => {
-    console.log(dueDate)
     setValue(parse(dueDate, 'dd/MM/yyyy', new Date()))
   }, [dueDate])
 
@@ -21,7 +20,6 @@ export function EditDatePicker({ onChange, dueDate }) {
         label="Basic example"
         value={value}
         onChange={(newValue) => {
-          console.log(newValue)
           setValue(newValue)
           onChange(newValue)
         }}

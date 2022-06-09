@@ -16,8 +16,6 @@ export function AllTodos({ todos, onHandleDelete }) {
     const data = await fetch(`${url}tasks`)
     const resultTodos = await data.json()
     setAllTodos(resultTodos)
-    // eslint-disable-next-line no-console
-    console.log(resultTodos)
   }
 
   function onHandleEdit(todo) {
