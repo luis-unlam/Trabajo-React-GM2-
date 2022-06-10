@@ -1,52 +1,68 @@
+/* eslint-disable no-return-assign */
 /* eslint-disable react/prop-types */
 /* eslint-disable consistent-return */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import './AllTodos.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { act } from 'react-dom/test-utils'
 
 const url = 'https://6297eb2e8d77ad6f750aadac.mockapi.io/api/v1/'
 
 export function AllTodos({ todos, onHandleDelete }) {
   const [allTodos, setAllTodos] = useState([])
-  const [lateTask, setLateTask] = useState(false)
+  const [isCompleted, setIsCompleted] = useState(todos.completed)
 
   const getTodos = async () => {
-    const data = await fetch(`${url}tasks`)
+    const data = await fetch(`${url}tasks/${id}`)
     const resultTodos = await data.json()
     setAllTodos(resultTodos)
+    console.log(resultTodos)
   }
 
-  const calcDate = () => {
-    const dateTask = new Date()
-    const actualDate = new Date()
-    if (dateTask > actualDate) {
-      console.log('te pasaste')
-      setLateTask(true)
-    } else {
-      setLateTask(false)
-      console.log('no te pasaste')
+  const changeCompleted = (event) => {
+    // e.preventDefault()
+    console.log(event.target.checked)
+
+    const pas = event.target.checked
+
+    if (pas === true) {
+      const element = document.querySelector('#put-request .date-updated')
+      const requestOptions = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ completed: true }),
+      }
+
+      fetch(`${url}tasks/12`, requestOptions) // aca habria que pasarle el todo.id por el 12
+        .then((response) => response.json())
+        .then((data) => (element.innerHTML = data.updatedAt))
+
+      navigate('/editPage')
     }
-  }
+    if (pas === false) {
+      const element = document.querySelector('#put-request .date-updated')
+      const requestOptions = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ completed: false }),
+      }
 
-  function onHandleEdit(todo) {
-    fetch(`${url}tasks/${todo.id}`, {
-      method: 'PUT',
-    }).then((result) => {
-      result.json().then((resp) => {
-        console.warn(resp)
-      })
-    })
+      fetch(`${url}tasks/12`, requestOptions)
+        .then((response) => response.json())
+        .then((data) => (element.innerHTML = data.updatedAt))
 
-    return resp
+      navigate('/editPage')
+    }
   }
 
   useEffect(() => {
     getTodos()
-    calcDate()
+  }, [])
+
+  useEffect(() => {
+    setIsCompleted()
   }, [])
 
   return (
@@ -55,9 +71,14 @@ export function AllTodos({ todos, onHandleDelete }) {
         {todos.map((todo) => (
           <li className="todos" key={todo.id}>
             <div className="inputCheckTodoContainer">
-              <input type="checkbox" className="inputCheckTodo" />
+              <input
+                type="checkbox"
+                className="inputCheckTodo"
+                defaultChecked={todo.completed}
+                onChange={changeCompleted} // de aca deberiamos pasar el todo.id
+              />
             </div>
-            <div className={lateTask ? 'todosLate' : 'completeTask'}>
+            <div className="completeTask">
               <div className="infoTask">
                 <div className="taskFirstRow">
                   <p>{todo.name}</p>
@@ -67,7 +88,7 @@ export function AllTodos({ todos, onHandleDelete }) {
                 <p className="lastp">{todo.comment}</p>
               </div>
               <div className="taskButtons">
-                <NavLink to={`/editPage/${todo.id}`}>
+                <Link to={`/editPage/${todo.id}`}>
                   <button
                     type="button"
                     className="editButton"
@@ -75,7 +96,7 @@ export function AllTodos({ todos, onHandleDelete }) {
                   >
                     <i className="fas fa-edit fa-edit fa-2x" />
                   </button>
-                </NavLink>
+                </Link>
                 <button
                   type="button"
                   className="deleteButton"
