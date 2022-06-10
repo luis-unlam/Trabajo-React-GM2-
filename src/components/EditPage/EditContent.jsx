@@ -63,7 +63,6 @@ export function EditContent() {
     fetch(`${url}tasks/${id}`, requestOptions)
       .then((response) => response.json())
       .then((data) => (element.innerHTML = data.updatedAt))
-
     navigate('/')
   }
 
