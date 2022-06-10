@@ -32,20 +32,6 @@ export function EditContent() {
     setTodo(resultTodos)
   }
 
-  // const onHandleEdit = (e) => {
-  //   e.preventDefault()
-
-  //   const requestOptions = {
-  //     method: 'PUT',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({ id: todo.id, name, category, date, comment }),
-  //   }
-  //     .then((response) => response.json())
-  //     // eslint-disable-next-line no-console
-  //     .then((result) => console.log(result))
-  //   fetch(`${url}tasks/${id}`, requestOptions)
-  // }
-
   useEffect(() => {
     getTodo()
   }, [])

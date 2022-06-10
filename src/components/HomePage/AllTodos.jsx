@@ -89,11 +89,7 @@ export function AllTodos({ todos, onHandleDelete }) {
               </div>
               <div className="taskButtons">
                 <Link to={`/editPage/${todo.id}`}>
-                  <button
-                    type="button"
-                    className="editButton"
-                    // onClick={() => onHandleEdit(todo)}
-                  >
+                  <button type="button" className="editButton">
                     <i className="fas fa-edit fa-edit fa-2x" />
                   </button>
                 </Link>
