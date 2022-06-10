@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable consistent-return */
 import { useState, useEffect } from 'react'
 import './ViewTasks.css'
@@ -21,7 +22,7 @@ export function ViewTasks() {
       method: 'DELETE',
     }).then((result) => {
       result.json().then((resp) => {
-        console.warn(resp)
+        return resp
       })
     })
 
